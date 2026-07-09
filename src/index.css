@@ -59,6 +59,19 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.hero-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 55%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black 5%, transparent 92%);
+}
+
+.hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
