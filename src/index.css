@@ -35,6 +35,8 @@
 
 html {
   color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 html[data-theme='dark'] {
@@ -58,6 +60,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   body {
     transition: none;
   }
