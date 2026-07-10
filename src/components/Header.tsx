@@ -5,7 +5,7 @@ import meImage from '../assets/me.jpg'
 const navigation = [
   { label: 'Sobre', href: '#sobre' },
   { label: 'Projetos', href: '#projetos' },
-  { label: 'Experiência', href: '#experiencia' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contato', href: '#contato' },
 ]
 
