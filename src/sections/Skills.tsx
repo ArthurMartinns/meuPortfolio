@@ -12,6 +12,7 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
+  SiNodedotjs,
 } from "react-icons/si";
 import {
   Braces,
@@ -29,10 +30,12 @@ const skillGroups = [
     items: [
       { name: "Java", icon: Coffee },
       { name: "Spring Boot", icon: SiSpringboot },
+      { name: "APIs REST", icon: Code2 },
       { name: "MySQL", icon: SiMysql },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "Docker", icon: SiDocker },
       { name: "React.js", icon: SiReact },
+      { name: "Node.js", icon: SiNodedotjs },
       { name: "TypeScript", icon: SiTypescript },
       { name: "Git", icon: SiGit },
     ],
@@ -78,21 +81,21 @@ export function Skills() {
           </p>
         </div>
 
-        <div className="grid gap-10 border-x border-border px-10 lg:grid-cols-4">
+        <div className="grid items-start gap-10 border-x border-border px-6 sm:px-10 lg:grid-cols-4">
           {skillGroups.map((group) => (
-            <div key={group.title}>
-              <h3 className="font-mono text-xs tracking-[0.16em] text-accent uppercase">
+            <div key={group.title} className="w-full min-w-0">
+              <h3 className="min-h-8 font-mono text-xs tracking-[0.16em] text-accent uppercase">
                 {group.title}
               </h3>
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-5 grid w-full gap-2">
                 {group.items.map((item) => {
                   const Icon = item.icon;
 
                   return (
                     <span
                       key={`${group.title}-${item.name}`}
-                      className="inline-flex items-center gap-2 border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+                      className="flex min-h-9 w-full items-center gap-2 border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
                     >
                       <Icon className="size-3.5 text-accent" />
                       {item.name}

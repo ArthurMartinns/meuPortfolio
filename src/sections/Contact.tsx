@@ -5,8 +5,8 @@ import { FaGithub } from "react-icons/fa";
 const contactLinks = [
   {
     label: "E-mail",
-    value: "arthurmartinsdev@email.com",
-    href: "mailto:arthurmartinsdev@email.com",
+    value: "arthurmartinsdev@gmail.com",
+    href: "mailto:arthurmartinsdev@gmail.com",
     icon: Mail,
   },
   {
@@ -34,11 +34,11 @@ export function Contact() {
 
           <div>
             <h2 className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
-              Estou disponível para novos desafios. Vamos conversar?
+              Tem um desafio em mente? Vamos construir a solução.
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
-             Uma experiência digital clara, funcional e bem construída.
+              Estou em Belo Horizonte e aberto a oportunidades para criar produtos robustos, escaláveis e de qualidade.
             </p>
 
             <div className="mt-12 divide-y divide-border border-y border-border">
