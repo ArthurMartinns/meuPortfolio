@@ -1,10 +1,17 @@
-# Portfólio
+# Portfólio - Arthur Martins
 
-Portfólio pessoal desenvolvido com React, TypeScript, Vite e Tailwind CSS.
+Portfólio pessoal desenvolvido para apresentar minha trajetória, competências e projetos como engenheiro de software.
 
-## Scripts
+## Tecnologias
 
-- `npm run dev`: inicia o ambiente de desenvolvimento.
-- `npm run build`: gera a versão de produção.
-- `npm run lint`: executa a análise estática do código.
-- `npm run preview`: visualiza localmente a versão de produção.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## Como executar
+
+```bash
+npm install
+npm run dev
+```
