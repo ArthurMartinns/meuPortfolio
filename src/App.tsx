@@ -1,4 +1,5 @@
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { About } from './sections/About'
 import { Contact } from './sections/Contact'
 import { Hero } from './sections/Hero'
@@ -16,6 +17,7 @@ function App() {
       <Projects/>
       <Skills/>
       <Contact/>
+      <Footer />
     </div>
   )
 }
