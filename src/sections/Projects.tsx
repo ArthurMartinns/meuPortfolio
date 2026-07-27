@@ -3,22 +3,25 @@ const projects = [
     name: "Nome do Projeto",
     type: "Web app",
     stack: "React · TypeScript · Tailwind",
-    description: "Interface responsiva para organizar fluxos e visualizar dados com clareza.",
+    description:
+      "Interface responsiva para organizar fluxos e visualizar dados com clareza.",
     href: "#",
   },
   {
     name: "Nome do Projeto",
     type: "Dashboard",
     stack: "Next.js · PostgreSQL · Prisma",
-    description: "Painel para acompanhamento de métricas, filtros e ações essenciais.",
+    description:
+      "Painel para acompanhamento de métricas, filtros e ações essenciais.",
     href: "#",
   },
   {
-    name: "Nome do Projeto",
-    type: "Landing page",
-    stack: "React · Motion · CMS",
-    description: "Página institucional com foco em performance, narrativa e conversão.",
-    href: "#",
+    name: "Portfólio Pessoal",
+    type: "Aplicação Web",
+    stack: "React · TypeScript · TalwindCSS",
+    description:
+      "Portfólio desenvolvido para apresentar minha trajetória, experiências e projetos.",
+    href: "https://github.com/ArthurMartinns/meuPortfolio",
   },
 ];
 
@@ -33,7 +36,8 @@ export function Projects() {
 
           <div className="max-w-2xl">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Trabalhos desenvolvidos durante minha trajetória como desenvolvedor.
+              Trabalhos desenvolvidos durante minha trajetória como
+              desenvolvedor.
             </h2>
           </div>
         </div>
@@ -43,6 +47,7 @@ export function Projects() {
             <a
               key={project.name}
               href={project.href}
+              target={project.href.startsWith("http") ? "_blank" : undefined}
               className="group grid gap-5 py-8 transition-colors hover:bg-card/40 sm:grid-cols-[1fr_auto] sm:px-4"
             >
               <div className="max-w-2xl">
@@ -65,9 +70,14 @@ export function Projects() {
                   {project.stack}
                 </p>
 
-                <span className="mt-4 inline-block text-sm text-foreground transition-transform group-hover:translate-x-1">
+                <a
+                  href={project.href}
+                  rel="noopener noreferrer"
+                  target={project.href.startsWith("http") ? "_blank" : undefined}
+                  className="mt-4 inline-block text-sm text-foreground transition-transform group-hover:translate-x-1"
+                >
                   Ver projeto →
-                </span>
+                </a>
               </div>
             </a>
           ))}
