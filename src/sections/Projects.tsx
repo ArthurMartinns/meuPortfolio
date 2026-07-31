@@ -1,27 +1,27 @@
 const projects = [
   {
-    name: "Nome do Projeto",
-    type: "Web app",
-    stack: "React · TypeScript · Tailwind",
-    description:
-      "Interface responsiva para organizar fluxos e visualizar dados com clareza.",
-    href: "#",
-  },
-  {
-    name: "Nome do Projeto",
-    type: "Dashboard",
-    stack: "Next.js · PostgreSQL · Prisma",
-    description:
-      "Painel para acompanhamento de métricas, filtros e ações essenciais.",
-    href: "#",
-  },
-  {
     name: "Portfólio Pessoal",
     type: "Aplicação Web",
     stack: "React · TypeScript · TalwindCSS",
     description:
-      "Portfólio desenvolvido para apresentar minha trajetória, experiências e projetos.",
+      "Portfólio pessoal criado para apresentar minha trajetória profissional, experiências, habilidades e principais projetos.",
     href: "https://github.com/ArthurMartinns/meuPortfolio",
+  },
+  {
+    name: "Library API",
+    type: "API REST",
+    stack: "Java · Spring Boot · PostgreSQL · Docker",
+    description:
+      "API REST para gerenciar livros, autores e usuários, com autenticação OAuth2/JWT, controle de acesso por perfis e documentação Swagger.",
+    href: "https://github.com/ArthurMartinns/libraryAPI",
+  },
+  {
+    name: "Novo projeto",
+    type: "Em desenvolvimento...",
+    stack: "Tecnologias em definição",
+    description:
+      "Um novo projeto está sendo desenvolvido. Em breve, mais detalhes e atualizações estarão disponíveis.",
+    href: "#",
   },
 ];
 
@@ -73,7 +73,9 @@ export function Projects() {
                 <a
                   href={project.href}
                   rel="noopener noreferrer"
-                  target={project.href.startsWith("http") ? "_blank" : undefined}
+                  target={
+                    project.href.startsWith("http") ? "_blank" : undefined
+                  }
                   className="mt-4 inline-block text-sm text-foreground transition-transform group-hover:translate-x-1"
                 >
                   Ver projeto →

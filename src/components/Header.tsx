@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { ThemeToggle } from './ThemeToggle'
-import meImage from '../assets/me.jpg'
 
 const navigation = [
   { label: 'Sobre', href: '#sobre' },
@@ -29,9 +28,9 @@ export function Header() {
           className="group flex items-center gap-3 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           aria-label="Ir para o início"
         >
-          <span className="grid size-10 place-items-center rounded-full border border-border bg-card font-mono text-xs font-semibold tracking-wider text-accent transition-colors group-hover:border-accent">
-            <img className="grid size-10 place-items-center rounded-full border border-border bg-card font-mono text-xs font-semibold tracking-wider text-accent transition-colors group-hover:border-accent" src={meImage} alt="" />
-          </span>
+          {/* <span className="grid size-10 place-items-center rounded-full border border-border bg-card font-mono text-xs font-semibold tracking-wider text-accent transition-colors group-hover:border-accent">
+            AM
+          </span> */}
           <span className="flex flex-col leading-none">
             <span className="text-sm font-semibold tracking-tight">Arthur Martins</span>
             <span className="mt-1.5 text-[0.68rem] tracking-[0.16em] text-muted-foreground uppercase">

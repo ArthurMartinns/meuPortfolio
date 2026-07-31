@@ -1,8 +1,19 @@
+import meImage from '../assets/me.jpg'
+
 export function About() {
   return (
     <section id="sobre" className="border-b border-border">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:py-32">
-        <div><p className="font-mono text-xs tracking-[0.18em] text-muted-foreground uppercase">Sobre mim</p></div>
+        <div className="space-y-6">
+          <p className="font-mono text-xs tracking-[0.18em] text-muted-foreground uppercase">Sobre mim</p>
+          <div className="max-w-sm overflow-hidden rounded-2xl border border-border bg-card p-2">
+            <img
+              className="aspect-[4/5] w-full rounded-xl object-cover object-top"
+              src={meImage}
+              alt="Arthur Martins"
+            />
+          </div>
+        </div>
         <div className="space-y-10">
           <div className="max-w-3xl space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Construo soluções de ponta a ponta!</h2>
