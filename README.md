@@ -23,21 +23,16 @@ O portfólio é dividido nas seguintes seções:
 
 ## Protótipo
 
-Os wireframes e protótipos do projeto foram desenvolvidos no Figma.
+///.....
 
-### Página inicial
+### Wireframe
 
-///Imagem da tela inicial em breve
+<img width="1440" height="4315" alt="wireframe-portfolio" src="https://github.com/user-attachments/assets/50ebec14-2c36-4433-9411-53ff540491aa" />
 
-### Projetos
-
-///Imagem da tela de projetos em breve
-
-### Contato
-
-///Imagem da tela de contatos em breve
 
 > Link do Figma: [[Figma]](https://www.figma.com/design/SCGvfUqGe801Anq3W3scyy/Portfolio-Arthur-Martins?node-id=0-1&t=B9GA9FKMRWpJq5tx-1)
+
+---
 
 ## Estrutura do Projeto
 
