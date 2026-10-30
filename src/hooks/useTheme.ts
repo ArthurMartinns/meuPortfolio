@@ -14,7 +14,11 @@ export function useTheme() {
   function changeTheme(nextTheme: Theme) {
     document.documentElement.dataset.theme = nextTheme
     document.documentElement.style.colorScheme = nextTheme
-    localStorage.setItem(THEME_STORAGE_KEY, nextTheme)
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme)
+    } catch {
+      // Manual switching still works when browser storage is unavailable.
+    }
     setTheme(nextTheme)
   }
 
