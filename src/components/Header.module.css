@@ -1,0 +1,87 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 24px 0;
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1104px;
+  min-height: 66px;
+  margin-inline: auto;
+  padding: 10px 16px 10px 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--background);
+  background: color-mix(in srgb, var(--background) 92%, transparent);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 30px rgb(0 0 0 / .05);
+}
+
+.signature {
+  display: inline-flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  margin-right: auto;
+  color: var(--foreground);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.065em;
+  text-decoration: none;
+}
+
+.slash { margin-inline: 8px; color: var(--accent); font-weight: 400; transition: transform .2s; }
+.signature b { color: var(--accent); font-weight: inherit; }
+.signature:hover .slash { transform: rotate(-15deg); }
+.navigation ul { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.navLink, .contact { position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 10px 14px; border-radius: 10px; font-size: 12px; line-height: 1.5; text-decoration: none; transition: color .2s, background-color .2s; }
+.navLink { color: var(--muted-foreground); }
+.navLink::after { content: ''; position: absolute; bottom: 5px; left: calc(50% - 2px); width: 4px; height: 4px; border-radius: 50%; background: var(--accent); opacity: 0; transition: opacity .2s; }
+.navLink:hover, .navLink[aria-current] { color: var(--foreground); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.navLink[aria-current]::after { opacity: 1; }
+.contact { margin-left: 8px; border: 1px solid var(--foreground); background: var(--foreground); color: var(--background); }
+.contact:hover, .contact[aria-current] { background: var(--accent); border-color: var(--accent); color: var(--background); }
+.contact svg { transition: transform .2s; }
+.contact:hover svg { transform: translate(2px, -2px); }
+.number { display: none; }
+.controls { display: flex; align-items: center; gap: 6px; padding-left: 16px; border-left: 1px solid var(--border); }
+.menuButton { display: none; }
+.header a:focus-visible, .menuButton:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .bar { gap: 12px; padding-left: 18px; }
+  .navLink, .contact { padding-inline: 10px; }
+  .controls { padding-left: 10px; }
+}
+
+@media (max-width: 767px) {
+  .header { padding: 10px 12px 0; }
+  .bar { min-height: 64px; padding: 9px 10px 9px 16px; gap: 8px; border-radius: 16px; }
+  .signature { font-size: 19px; }
+  .slash { margin-inline: 6px; }
+  .controls { border: 0; padding: 0; }
+  .menuButton { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; background: var(--card); color: var(--foreground); cursor: pointer; }
+  .menuButton:hover { border-color: var(--accent); color: var(--accent); }
+  .navigation { display: none; position: absolute; top: calc(100% + 8px); inset-inline: 0; max-height: calc(100dvh - 110px); overflow-y: auto; padding: 10px; border: 1px solid var(--border); border-radius: 16px; background: var(--background); box-shadow: 0 16px 32px rgb(0 0 0 / .1); }
+  .navigation.open { display: block; animation: openMenu .18s ease-out; }
+  .navigation ul { display: grid; gap: 4px; }
+  .navLink, .contact { min-height: 58px; justify-content: flex-start; padding: 14px 18px; font-size: 18px; letter-spacing: -.025em; }
+  .number { display: inline; margin-right: 10px; font: 10px/1.5 monospace; color: var(--muted-foreground); }
+  .navLink::after { left: auto; right: 18px; bottom: calc(50% - 2px); }
+  .contact { margin: 4px 0 0; }
+  .contact .number { color: inherit; opacity: .75; }
+  .contact svg { margin-left: auto; }
+}
+
+@keyframes openMenu { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .slash, .navLink, .navLink::after, .contact, .contact svg { transition: none; }
+  .signature:hover .slash, .contact:hover svg { transform: none; }
+  .navigation.open { animation: none; }
+}
