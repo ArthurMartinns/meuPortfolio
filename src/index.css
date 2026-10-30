@@ -1,26 +1,61 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./assets/fonts/inter-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('./assets/fonts/source-serif-4-latin-wght-normal.woff2') format('woff2');
+}
+
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 :root,
 [data-theme='light'] {
-  --background: #f7f4ef;
-  --foreground: #171717;
-  --muted-foreground: #5f5a54;
-  --card: #fffcf7;
-  --border: #ddd6cc;
-  --accent: #0f766e;
-  --accent-alternative: #c2410c;
+  --background: #f2f2f2;
+  --foreground: #0d0d0d;
+  --muted-foreground: #626262;
+  --card: #ffffff;
+  --background-secondary: #e5e5e5;
+  --on-background-secondary: #0d0d0d;
+  --border: #d5d5d5;
+  --primary: #1746a2;
+  --secondary: #355784;
+  --highlight: #8c8c8c;
+  --on-primary: #f2f2f2;
+  --on-secondary: #f2f2f2;
+  --primary-hover: #10367f;
+  --focus-ring: #1746a2;
+  --accent: var(--primary);
+  --accent-alternative: var(--secondary);
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Source Serif 4', Georgia, serif;
 }
 
 [data-theme='dark'] {
-  --background: #10100e;
-  --foreground: #f5f1ea;
-  --muted-foreground: #b8b0a6;
-  --card: #191816;
-  --border: #2d2a25;
-  --accent: #5eead4;
-  --accent-alternative: #fdba74;
+  --background: #0d0d0d;
+  --foreground: #f2f2f2;
+  --muted-foreground: #b8b8b8;
+  --card: #191919;
+  --background-secondary: #262626;
+  --on-background-secondary: #f2f2f2;
+  --border: #383838;
+  /* Lighter blues keep text, icons and controls readable on dark surfaces. */
+  --primary: #8ab4f8;
+  --secondary: #9bb5d9;
+  --highlight: #8c8c8c;
+  --on-primary: #0d0d0d;
+  --on-secondary: #0d0d0d;
+  --primary-hover: #aecbfa;
+  --focus-ring: #8ab4f8;
 }
 
 @theme inline {
@@ -31,6 +66,17 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-alternative: var(--accent-alternative);
+  --color-background-secondary: var(--background-secondary);
+  --color-on-background-secondary: var(--on-background-secondary);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-highlight: var(--highlight);
+  --color-on-primary: var(--on-primary);
+  --color-on-secondary: var(--on-secondary);
+  --color-primary-hover: var(--primary-hover);
+  --color-focus-ring: var(--focus-ring);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
 html {
@@ -49,9 +95,15 @@ body {
   margin: 0;
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
   transition:
     background-color 200ms ease,
     color 200ms ease;
+}
+
+::selection {
+  background: var(--secondary);
+  color: var(--on-secondary);
 }
 
 button,
