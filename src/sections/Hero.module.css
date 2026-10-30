@@ -1,0 +1,21 @@
+/* SVG artwork and entrance animation. Layout and typography live in Tailwind. */
+.intro { animation: arrive .7s ease-out both; }
+.artwork { animation: arrive .9s .08s ease-out both; }
+.arch { fill: var(--primary); }
+.archLine { stroke: var(--on-primary); stroke-opacity: .34; stroke-width: 1; }
+.orbit { fill: var(--background); stroke: var(--secondary); stroke-width: 1.2; }
+.orbitInner, .orbitLine { stroke: var(--secondary); stroke-width: 1; }
+.orbitInner { fill: color-mix(in srgb, var(--secondary) 9%, var(--background)); }
+.orbitLine { stroke-opacity: .45; }
+.center { fill: var(--secondary); }
+.baseline { stroke: var(--border); stroke-width: 1; }
+.smallCircle { fill: var(--highlight); }
+
+@keyframes arrive {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro, .artwork { animation: none; }
+}
