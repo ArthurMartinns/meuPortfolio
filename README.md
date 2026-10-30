@@ -4,8 +4,6 @@ Portfólio pessoal desenvolvido para apresentar minha trajetória, competências
 
 ## Tecnologias
 
-As principais tecnologias contidas no projeto são:
-
 * React.js
 * TypeScript
 * Vite
@@ -15,46 +13,36 @@ As principais tecnologias contidas no projeto são:
 
 O portfólio é dividido nas seguintes seções:
 
-* **Sobre Mim** — apresentação profissional em português e inglês.
+* **Início** — apresentação e acesso às principais seções.
+* **Sobre mim** — formação, trajetória e foco profissional.
 * **Projetos** — apresentação dos principais projetos desenvolvidos.
-* **Experiências** — trajetória profissional e acadêmica.
 * **Skills** — principais habilidades e tecnologias.
-* **Contato** — informações e formulário para contato.
-
-## Protótipo
-
-///.....
-
-### Wireframe
-
-<img width="1440" height="4315" alt="wireframe-portfolio" src="https://github.com/user-attachments/assets/50ebec14-2c36-4433-9411-53ff540491aa" />
-
-
-> Link do Figma: [[Figma]](https://www.figma.com/design/SCGvfUqGe801Anq3W3scyy/Portfolio-Arthur-Martins?node-id=0-1&t=B9GA9FKMRWpJq5tx-1)
-
----
+* **Contato** — links para e-mail, LinkedIn e GitHub.
 
 ## Estrutura do Projeto
 
 ```text
 src/
-├── assets/
-├── components/
-├── data/
-├── hooks/
+├── assets/           # Foto e fontes locais
+├── components/       # Header, Footer e botão de tema
+├── data/             # Arquivos de dados
+├── hooks/            # Controle do tema
 ├── sections/
 │   ├── About.tsx
+│   ├── About.module.css
 │   ├── Contact.tsx
-│   ├── Experiences.tsx
 │   ├── Hero.tsx
+│   ├── Hero.module.css
 │   ├── Projects.tsx
 │   └── Skills.tsx
-├── test/
-├── types/
+├── test/             # Configuração de testes
+├── types/            # Tipos TypeScript
 ├── App.tsx
 ├── index.css
 └── main.tsx
 ```
+
+O layout utiliza Tailwind CSS. Os arquivos CSS Modules ficam restritos a ilustrações, detalhes decorativos e animações. O portfólio possui temas claro e escuro, com a preferência salva no navegador.
 
 ## Como executar
 
