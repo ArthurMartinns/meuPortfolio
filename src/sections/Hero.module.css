@@ -1,21 +1,28 @@
-/* SVG artwork and entrance animation. Layout and typography live in Tailwind. */
-.intro { animation: arrive .7s ease-out both; }
-.artwork { animation: arrive .9s .08s ease-out both; }
-.arch { fill: var(--primary); }
-.archLine { stroke: var(--on-primary); stroke-opacity: .34; stroke-width: 1; }
-.orbit { fill: var(--background); stroke: var(--secondary); stroke-width: 1.2; }
-.orbitInner, .orbitLine { stroke: var(--secondary); stroke-width: 1; }
-.orbitInner { fill: color-mix(in srgb, var(--secondary) 9%, var(--background)); }
-.orbitLine { stroke-opacity: .45; }
-.center { fill: var(--secondary); }
-.baseline { stroke: var(--border); stroke-width: 1; }
-.smallCircle { fill: var(--highlight); }
-
-@keyframes arrive {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+﻿/* Hand-drawn decoration and entrance effects; layout stays in Tailwind. */
+@media (prefers-reduced-motion: no-preference) {
+  .greeting { animation: content-arrive 650ms cubic-bezier(.16, 1, .3, 1) both; }
+  .nameLine { animation: name-arrive 700ms cubic-bezier(.16, 1, .3, 1) both; }
+  .nameLine + .nameLine { animation-delay: 80ms; }
+  .description { animation: content-arrive 700ms 120ms cubic-bezier(.16, 1, .3, 1) both; }
+  .actions { animation: content-arrive 700ms 180ms cubic-bezier(.16, 1, .3, 1) both; }
+  .portrait { animation: content-arrive 850ms 80ms cubic-bezier(.16, 1, .3, 1) both; }
+  .photograph { animation: portrait-settle 1100ms cubic-bezier(.16, 1, .3, 1) both; }
+  .underline path { stroke-dasharray: 460; animation: underline-draw 800ms 150ms cubic-bezier(.16, 1, .3, 1) both; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .intro, .artwork { animation: none; }
+@keyframes name-arrive {
+  from { opacity: .65; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes content-arrive {
+  from { opacity: .75; translate: 0 12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes portrait-settle {
+  from { transform: scale(1.035); }
+  to { transform: scale(1); }
+}
+@keyframes underline-draw {
+  from { stroke-dashoffset: 460; }
+  to { stroke-dashoffset: 0; }
 }
