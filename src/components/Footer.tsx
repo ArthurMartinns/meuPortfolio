@@ -1,21 +1,23 @@
-import { ChevronsUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card/40">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-8 sm:px-6">
-        <p className="font-mono text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Arthur Martins
-        </p>
+    <footer className="bg-card">
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 px-5 py-10 min-[601px]:flex-row min-[601px]:items-center min-[762px]:px-6 min-[762px]:py-12">
+        <div>
+          <p className="m-0 text-sm leading-[1.6] text-muted-foreground">
+            © {new Date().getFullYear()} Arthur Martins
+          </p>
+        </div>
 
         <a
           href="#inicio"
           aria-label="Voltar ao topo da página"
-          title="Voltar ao topo"
-          className="group inline-flex size-11 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-all hover:-translate-y-1 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-full bg-primary/8 px-5 py-3 text-base leading-[1.5] font-medium text-primary no-underline transition-colors duration-200 hover:bg-primary/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring motion-reduce:transition-none"
         >
-          <ChevronsUp
-            className="size-5 transition-transform group-hover:-translate-y-0.5"
+          Voltar ao topo
+          <ArrowUp
+            className="size-5 transition-transform duration-200 group-hover:-translate-y-0.5 motion-reduce:transform-none motion-reduce:transition-none"
             aria-hidden="true"
           />
         </a>
