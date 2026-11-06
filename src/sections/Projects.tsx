@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import portfolioPreview from '../assets/portfolio-preview.jpg'
+import monviFlowImage from '../assets/monviFlowImage.png'
 
 const projects = [
   {
@@ -19,6 +20,8 @@ const projects = [
     stack: ['Java', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL'],
     description: 'O MonviFlow é uma aplicação de gestão financeira pessoal que ajuda a entender para onde o dinheiro vai e a planejar melhor seu uso. Permite organizar contas, registrar receitas e despesas, definir orçamentos por categoria e acompanhar saldos e resultados em um painel visual.',
     href: 'https://github.com/ArthurMartinns/monvi-flow',
+    image: monviFlowImage,
+    imageAlt: 'Prévia da aplicação MonviFlow',
     status: 'Em desenvolvimento',
   },
 ]
@@ -30,7 +33,7 @@ export function Projects() {
         <h2 id="projects-title" className="mt-0 mb-9 font-serif text-[clamp(34px,4vw,48px)] leading-[1.1] font-medium tracking-[-.035em] text-foreground min-[762px]:mb-10">Meus projetos<span className="text-primary">.</span></h2>
         <div className="grid grid-cols-1 items-stretch gap-12 min-[762px]:grid-cols-2 min-[762px]:gap-8">
           {projects.map((project, index) => (
-            <article key={project.id} className="flex min-w-0 flex-col" aria-labelledby={`${project.id}-title`}>
+            <article key={project.id} className="flex min-w-0 flex-col rounded-3xl border border-primary/30 bg-card p-5" aria-labelledby={`${project.id}-title`}>
               {project.image ? (
                 <img src={project.image} alt={project.imageAlt} width={1440} height={900} loading="lazy" decoding="async" className="block aspect-[16/10] w-full rounded-2xl object-cover object-top" />
               ) : (
