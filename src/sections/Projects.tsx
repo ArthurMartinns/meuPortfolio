@@ -22,7 +22,7 @@ const projects = [
     href: 'https://github.com/ArthurMartinns/monvi-flow',
     image: monviFlowImage,
     imageAlt: 'Prévia da aplicação MonviFlow',
-    status: 'Em desenvolvimento',
+    // status: 'Em desenvolvimento',
   },
 ]
 
@@ -41,7 +41,7 @@ export function Projects() {
               )}
               <div className="mt-6 mb-3 flex items-center gap-3 text-sm leading-[1.5] text-secondary"><span className="font-serif text-xl font-semibold italic text-primary" aria-hidden="true">0{index + 1}</span><span className="h-0.5 w-5 bg-primary/40" aria-hidden="true" /><span>{project.type}</span></div>
               <h3 id={`${project.id}-title`} className="m-0 font-serif text-[clamp(26px,2.5vw,32px)] leading-[1.2] font-medium tracking-[-.03em] text-foreground">{project.name}</h3>
-              {project.status && <p className="mt-2 mb-0 text-sm leading-[1.5] font-medium text-primary">{project.status}</p>}
+              {/* {project.status && <p className="mt-2 mb-0 text-sm leading-[1.5] font-medium text-primary">{project.status}</p>} */}
               <p className="mt-3 mb-5 max-w-[52ch] text-base leading-[1.7] text-foreground">{project.description}</p>
               <ul className="mt-auto mb-0 flex list-none flex-wrap gap-2 p-0" aria-label={`Tecnologias de ${project.name}`}>{project.stack.map(technology => <li key={technology} className="rounded-full bg-primary/8 px-3 py-1.5 text-sm leading-[1.5] text-primary">{technology}</li>)}</ul>
               <a className="group mt-6 inline-flex min-h-12 w-fit items-center gap-3 rounded-full bg-primary px-5 py-3 text-base leading-[1.5] font-medium text-on-primary no-underline transition-colors duration-200 hover:bg-primary-hover motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus-ring" href={project.href} target="_blank" rel="noopener noreferrer" aria-label={`Ver repositório de ${project.name} no GitHub (abre em nova aba)`}>Ver repositório <ArrowUpRight className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none motion-reduce:transition-none" size={18} aria-hidden="true" /></a>
