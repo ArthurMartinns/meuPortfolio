@@ -1,18 +1,18 @@
 import { ArrowUpRight } from 'lucide-react'
-import portfolioPreview from '../assets/portfolio-preview.jpg'
+// import portfolioPreview from '../assets/portfolio-preview.jpg'
 import monviFlowImage from '../assets/monviFlowImage.png'
 
 const projects = [
-  {
-    id: 'portfolio',
-    name: 'Portfólio Pessoal',
-    type: 'Aplicação web',
-    stack: ['React', 'TypeScript', 'Tailwind CSS'],
-    description: 'Um espaço para apresentar minha trajetória, competências e projetos, conectando desenvolvimento e identidade visual.',
-    href: 'https://github.com/ArthurMartinns/meuPortfolio',
-    image: portfolioPreview,
-    imageAlt: 'Página inicial do portfólio de Arthur Martins no tema escuro',
-  },
+  // {
+  //   id: 'portfolio',
+  //   name: 'Portfólio Pessoal',
+  //   type: 'Aplicação web',
+  //   stack: ['React', 'TypeScript', 'Tailwind CSS'],
+  //   description: 'Um espaço para apresentar minha trajetória, competências e projetos, conectando desenvolvimento e identidade visual.',
+  //   href: 'https://github.com/ArthurMartinns/meuPortfolio',
+  //   image: portfolioPreview,
+  //   imageAlt: 'Página inicial do portfólio de Arthur Martins no tema escuro',
+  // },
   {
     id: 'monviflow',
     name: 'MonviFlow',
