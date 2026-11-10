@@ -32,7 +32,7 @@ export function Contact() {
           <div>
             <p className="mt-0 mb-4 font-serif text-[clamp(26px,3vw,34px)] leading-[1.2] tracking-[-.025em] text-foreground">Vamos conversar?</p>
             <p className="m-0 max-w-[46ch] text-base leading-[1.8] text-foreground">
-              Estou em Belo Horizonte e aberto a oportunidades para criar produtos robustos, escaláveis e de qualidade.
+              Estou em Belo Horizonte e busco oportunidades em desenvolvimento backend com Java e Spring Boot ou em equipes full stack com React e TypeScript. Se esse perfil combina com o que você procura, me escreva por e-mail ou LinkedIn.
             </p>
           </div>
             <div className="grid min-w-0 gap-3">
